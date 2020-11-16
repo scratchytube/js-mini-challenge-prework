@@ -1,11 +1,17 @@
+
+Yeah im already feeling super discouraged so sorry for submitting this late 
+
 // ***** Question 1 *****
+var counter = 1
+
+ var counter = 2
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 1", "color: red") 
+console.log("%cQuestion 1", "color: red") 
 
-// console.log(counter) 
-// // => 2
-// console.log("%c----------", "color: red") 
+console.log(counter) 
+// => 2
+console.log("%c----------", "color: red") 
 
 
 // ***** Question 2 *****
@@ -15,57 +21,88 @@
 // *** otherwise, the error will stop the rest of your code from running
 // console.log("%cQuestion 2", "color: red") 
 
-// console.log(name)
-// // => "Ian"
+const name = "Brian"
+
+
+console.log(name)
+// => "Ian"
 // name = "Not Ian" 
-// // => TypeError
-// console.log("%c----------", "color: red") 
+// => TypeError
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 3 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 3", "color: red") 
 
-// console.log(drinkWater(12))
-// // => "Man I sure am thirsty"
-// // => "Ahh that hits the spot"
-// // => 11
-// console.log("%c----------", "color: red") 
+
+
+function drinkWater(currentThirstLevel) {
+  console.log("Man I sure am thirsty");
+  currentThirstLevel -=1 ;
+  console.log("Ahh that hits the spot");
+  return currentThirstLevel
+}
+
+
+console.log("%cQuestion 3", "color: red") 
+
+console.log(drinkWater(12))
+// => "Man I sure am thirsty"
+// => "Ahh that hits the spot"
+// => 11
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 4 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 4", "color: red") 
+// idk :(
 
-// console.log(sameSameButDifferent(5, 5)) 
-// // => "same same"
-//
-// console.log(sameSameButDifferent(123, "123")) 
-// // => "same same (but different)"
-//
-// console.log(sameSameButDifferent(5, 7)) 
-// // => "different"
-//
-// console.log(sameSameButDifferent(123, "122")) 
-// // => "different"
-// console.log("%c----------", "color: red") 
+function sameSameButDifferent(num, maybeNum) {
+  if ( num === maybeNum ) {
+  console.log("same same")
+  else
+   return "same same but different"
+  }
+}
+
+
+
+console.log("%cQuestion 4", "color: red") 
+
+console.log(sameSameButDifferent(5, 5)) 
+// => "same same"
+
+console.log(sameSameButDifferent(123, "123")) 
+// => "same same (but different)"
+
+console.log(sameSameButDifferent(5, 7)) 
+// => "different"
+
+console.log(sameSameButDifferent(123, "122")) 
+// => "different"
+console.log("%c----------", "color: red") 
 
 
 
 // ***** Question 5 *****
 
 // *** Uncomment the lines below to test
-// console.log("%cQuestion 5", "color: red")
 
-// const student1 = { name: "Duane", grade: 88 }
-// updateGrade(student1, 92)
-// console.log(student1)  
-// // => { name: "Duane", grade: 92 }
-// console.log("%c----------", "color: red") 
+function updateGrade (student, grade ) {
+  student.grade = grade 
+}
+
+console.log("%cQuestion 5", "color: red")
+
+const student1 = { name: "Duane", grade: 88 }
+updateGrade(student1, 92)
+console.log(student1)  
+// => { name: "Duane", grade: 92 }
+console.log("%c----------", "color: red") 
 
 
 
@@ -73,6 +110,24 @@
 
 // *** Uncomment the lines below to test
 // console.log("%cQuestion 6", "color: red")
+
+Wrote this during lecture
+
+
+// function printNameAndPhones(users) {
+//   for (let userObj of users) {
+//     console.log(userObj.name)
+//     console.log(`Cell: ${userObj.phones.cell}`)
+//     console.log(`Office: ${userObj.phones.office}`)
+//   }
+// }
+
+// users.forEach(function(userObj) {
+// console.log(userObj)
+// console.log(`Cell: ${userObj.phones.cell}`)
+// console.log(`Office: ${userObj.phones.office}`)
+// })
+
 
 // const users = [ 
 //   { 
@@ -94,15 +149,7 @@
 
 // ***** Callbacks *****
 
-function myMap(array, callback) {
-  const result = []
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i]
-    const value = callback(element)
-    result.push(value)
-  }
-  return result
-}
+
 
 // ***** Callbacks - Question 1 *****
 
@@ -130,20 +177,22 @@ function myMap(array, callback) {
 
 // ***** Scope & Closures *****
 
-function takeANumber(line, name) {
-  line.push(name)
+I honestly didnt even write this code it just showed up 
 
-  return `Welcome, ${name}. You are number ${line.length} in line.`
-}
+// function takeANumber(line, name) {
+//   line.push(name)
 
-function nowServing(line) {
-  if (!line.length) {
-    return "There is nobody waiting to be served!"
-  }
-  return `Currently serving ${line.shift()}.`
-}
+//   return `Welcome, ${name}. You are number ${line.length} in line.`
+// }
 
-const line = []
+// function nowServing(line) {
+//   if (!line.length) {
+//     return "There is nobody waiting to be served!"
+//   }
+//   return `Currently serving ${line.shift()}.`
+// }
+
+// const line = []
 
 // ***** Scope & Closures - Question 1 *****
 
